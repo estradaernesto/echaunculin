@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/pruebaSpring</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <property name="hibernate.dialect.storage_engine">innodb</property>        <!-- JDBC connection pool
+        settings -->
+        <property name="connection.pool_size">10</property>        <!-- Select our SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>        <!-- Echo
+        the SQL to stdout -->
+        <property name="show_sql">true</property>        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>        <!-- Drop and re-create the
+        database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.connection.useSSL">false</property>        <!-- Mention here all the model
+        classes along with their package -->
+        <mapping class="com.sidrerias.modelo.Usuario" />
+        <mapping class="com.sidrerias.modelo.Sidreria" />
+        <mapping class="com.sidrerias.modelo.Sidra" />
+        <mapping class="com.sidrerias.modelo.Review" />
+        <mapping class="com.sidrerias.modelo.Plato" />
+        <mapping class="com.sidrerias.modelo.Menu" />
+        <mapping class="com.sidrerias.modelo.Carta" />
+        <mapping class="com.sidrerias.modelo.ImagenSidreria" />
+    </session-factory>
+</hibernate-configuration>

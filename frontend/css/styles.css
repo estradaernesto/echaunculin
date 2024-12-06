@@ -1,0 +1,278 @@
+:root {
+    --font-family: "Mulish", sans-serif;
+    --headins-font-family: "Montserrat", sans-serif;
+
+    --negro: #23201B;
+    --blanco-fondo: #fefefe;
+    --verde-claro: #dce1c7;
+    --verde-principal: #40591B;
+    --verde-resaltado: #a8c902;
+    --verde-oscuro: #093017;
+    --amarillo-sidra: #edcb45;
+    --verde-transparente: #3375102d
+
+}
+
+body {
+    background-color: var(--blanco-fondo);
+    color: var(--negro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: var(--headins-font-family); */
+    color: var(--negro);
+}
+
+header a img{
+    scale: 1.5;
+    margin: 0 10px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--verde-principal);
+    padding: 5% 0;
+    color: var(--blanco-fondo);
+    font-size: 1.2rem;
+}
+
+/* footer .navbar-brand{
+} */
+footer a{
+    color: var(--blanco-fondo);
+    text-decoration: underline;
+}
+footer a img{
+    scale: 2;
+    margin-right: 15px;
+}
+
+
+/*navbar*/
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+ .respuesta-texto{
+    background-color: var(--verde-claro) !important;
+ }
+
+/*login registro*/
+.login {
+    /* background-color: var(--verde-claro); */
+    display: grid;
+    place-content: center;
+    min-height: 95vh;
+}
+
+/*SIDRERIAS*/
+span.checked{
+    color: var(--amarillo-sidra);
+}
+.sidreria-item {
+    position: relative; /* Necesario para posicionar el botón */
+}
+
+.btn-favorito {
+    z-index: 10; /* Asegura que esté encima */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+    border: 2px solid #ddd;
+    color: black;
+    font-size: 24px;
+}
+/*MI SIDRERIA*/
+.comentario-item {
+    min-height: 300px;
+}
+
+.comentario-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+/*PAGINA SIDRERIA*/
+.review-item {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.respuesta-texto {
+    background-color: #f8f9fa; /* Color claro de fondo */
+    padding: 0.5rem;
+    border-radius: 0.375rem; /* Equivalente a rounded de Bootstrap */
+}
+
+
+/*LOGIN*/
+.login-form {
+    /* color: white; */
+}
+
+.login-form .form-label {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.login-form .form-control {
+    background-color: var(--blanco-fondo);
+    border: 1px solid var(--verde-oscuro);
+    /* color: white; */
+}
+
+.login-form .btn {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.login-form .login-links {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media (min-width: 992px) {
+    .login {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .login-form {
+        width: 35%;
+        padding: 5% 0 5% 5%;
+    }
+
+    .login-img {
+        width: 60%;
+        height: 100vh;
+        background-image: url("../imagenes/escanciar1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom left;
+    }
+}
+
+/*BOOTSTRAP*/
+.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    --bs-btn-color: white;
+    --bs-btn-bg: var(--verde-oscuro);
+    --bs-btn-border-color: var(--verde-oscuro);
+    --bs-btn-hover-color: var(--verde-oscuro);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--verde-oscuro);
+    --bs-btn-focus-shadow-rgb: 130, 138, 145;
+    --bs-btn-active-color: var(--verde-oscuro);
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: var(--verde-oscuro);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--color-background-dark);
+    --bs-btn-disabled-bg: #bebebf;
+    --bs-btn-disabled-border-color: #bebebf;
+
+}
+
+.btn-secondary {
+    --bs-btn-color: white;
+    --bs-btn-bg: var(--verde-principal);
+    --bs-btn-border-color: var(--verde-principal);
+    --bs-btn-hover-color: var(--verde-principal);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--verde-principal);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: var(--verde-principal);
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: var(--verde-principal);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--negro);
+    --bs-btn-disabled-bg: grey;
+    --bs-btn-disabled-border-color: grey;
+}
+
+/* .btn-outline-primary {
+    --bs-btn-color: var(--verde-oscuro);
+    --bs-btn-border-color: var(--verde-oscuro);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--color-purple-light-hover);
+    --bs-btn-hover-border-color: var(--color-purple-light-hover);
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--color-purple-light-hover);
+    --bs-btn-active-border-color: var(--color-purple-light-hover);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #bebebf;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #bebebf;
+    --bs-gradient: none;
+} */
+
+.div-flash {
+    position: relative;
+}
+
+/* .alert {
+    position: fixed;
+    z-index: 2;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    name duration timing-function delay iteration-count direction fill-mode;
+    animation: fadeout 0.8s linear 3s forwards;
+} */
+
+.table {
+    --bs-table-bg: #a22ff114;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--verde-principal);
+    background-color: #a22ff114;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.nav-link {
+    color: var(--negro);
+}
+
+.nav-item{
+    margin: 0 5px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--verde-principal);
+}
+
+.form-control {
+    background-color: transparent;
+}
+
+.form-control:focus {
+    /* color: var(--bs-body-color); */
+    /* background-color: var(--bs-body-bg); */
+    border-color: var(--verde-principal);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--verde-transparente);
+}
